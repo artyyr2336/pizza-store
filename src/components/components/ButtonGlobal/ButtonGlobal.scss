@@ -1,0 +1,12 @@
+.basketButton {
+	padding: 12px 25px;
+	background: #fe5f1e;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 30px;
+	transition: all 0.3s;
+	&:hover {
+		background-color: #df4304;
+	}
+}
