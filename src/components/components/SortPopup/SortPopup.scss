@@ -1,0 +1,42 @@
+.sort {
+	.rotated {
+		transform: rotate(180deg);
+	}
+	img {
+		transition: all 0.3s;
+	}
+	.active-li {
+		background: rgba(254, 95, 30, 0.05);
+		font-weight: 700;
+		color: #fe5f1e;
+		transition: all 0.4s;
+	}
+	.teg-name {
+		font-weight: 700;
+	}
+	.teg-sort {
+		color: #fe5f1e;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.block-sort {
+		padding: 15px 0;
+		border-radius: 25px;
+		background-color: #fff;
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+		width: 170px;
+		font-size: 14px;
+		margin-left: auto;
+		position: absolute;
+		bottom: -161px;
+		right: 0;
+		li {
+			padding: 10px 10px;
+			cursor: pointer;
+			transition: all 0.4s;
+			&:hover {
+				background-color: rgba(254, 95, 30, 0.05);
+			}
+		}
+	}
+}
