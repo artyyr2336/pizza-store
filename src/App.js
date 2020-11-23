@@ -1,3 +1,4 @@
+import axios from "axios"
 import React from "react"
 import { Route } from "react-router-dom"
 import "./App.scss"
@@ -8,11 +9,9 @@ const App = () => {
 	const [pizzas, setPizzas] = React.useState([])
 
 	React.useEffect(() => {
-		fetch("http://localhost:3000/db.json")
-			.then(resp => resp.json())
-			.then(json => {
-				setPizzas(json.pizzas)
-			})
+		axios.get("http://localhost:3000/db.json").then(({ data }) => {
+			setPizzas(data.pizzas)
+		})
 	}, [])
 	return (
 		<div className="block">
@@ -20,6 +19,7 @@ const App = () => {
 				<Header />
 				<Route path="/" render={() => <Home items={pizzas} />} exact />
 				<Route path="/Cart" component={Cart} exact />
+
 			</div>
 		</div>
 	)
